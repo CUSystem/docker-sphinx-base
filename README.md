@@ -43,3 +43,7 @@ $ docker pull cusystem/docker-sphinx-base
       ```
 
 4. To view it go to your browser at http://localhost:8088.
+
+
+
+(c) 2017, Regents of the University of Colorado
