@@ -42,4 +42,15 @@ $ docker pull cusystem/docker-sphinx-base
       $ docker run --name your-new-docsite-container -d -p 8088:80 your-new-docsite-tag
       ```
 
+      Variables:
+
+      - Setting LISTEN_PORT will change the listen port in the NGINX server. This is usually necessary if these containers are fronted by haproxy to aggregate docsites. Default is 80.
+
+      - Setting LOCATION will change the location. It does not require a slash. Example: to change the location of the docsite to 'location /my_cool_docsite', set LOCATION=my_cool_docsite. Default is empty, which will set location to /.
+
+     With environment variables:
+      ```bash
+      $ docker run --name your-new-docsite-container -d -p 8088:80 -e LISTEN_PORT=8088 -e LOCATION=new-docsite your-new-docsite-tag
+      ```
+
 4. To view it go to your browser at http://localhost:8088.
