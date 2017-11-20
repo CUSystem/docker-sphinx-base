@@ -11,6 +11,7 @@ RUN apk add --no-cache bash && \
     \
     \
     echo "Install Sphinx-docs" && \
+    pip install pip --upgrade --no-cache-dir && \
     pip install Sphinx --no-cache-dir && \
     pip install sphinx_rtd_theme --no-cache-dir && \
     pip install alabaster --no-cache-dir && \
