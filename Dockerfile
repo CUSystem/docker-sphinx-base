@@ -1,14 +1,14 @@
-FROM nginx:alpine
+FROM nginx
 
 LABEL Maintainers="Steve.Taylor <steve.taylor@cu.edu>"
 
 COPY run_nginx.sh /usr/local/bin
 
-RUN apk update && apk upgrade && \
-    apk add --no-cache bash && \
-    apk add --no-cache python && \
-    apk add --no-cache python-dev && \
-    apk add --no-cache py-pip && \
+RUN apt-get -y update && apt-get -y upgrade && \
+    apt-get -y install bash && \
+    apt-get -y install python && \
+    apt-get -y install python-dev && \
+    apt-get -y install python-pip && \
     \
     \
     echo "Install Sphinx-docs" && \
