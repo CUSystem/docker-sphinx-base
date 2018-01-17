@@ -4,7 +4,7 @@ LABEL Maintainers="Steve.Taylor <steve.taylor@cu.edu>"
 
 COPY run_nginx.sh /usr/local/bin
 
-RUN apk update && apk upgrade && \
+RUN apk update && apk upgrade --no-cache --update && \
     apk add --no-cache bash && \
     apk add --no-cache python && \
     apk add --no-cache python-dev && \
