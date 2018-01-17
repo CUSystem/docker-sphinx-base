@@ -4,8 +4,8 @@ LABEL Maintainers="Steve.Taylor <steve.taylor@cu.edu>"
 
 COPY run_nginx.sh /usr/local/bin
 
-RUN echo "http://dl-cdn.alpinelinux.org/alpine/v3.7/main/" >> /et/apk/repositories && \
-    apk update && apk upgrade --no-cache --update && \
+RUN echo "http://dl-cdn.alpinelinux.org/alpine/v3.7/main" >> /etc/apk/repositories && \
+    apk add busybox --update && \
     apk add --no-cache bash && \
     apk add --no-cache python && \
     apk add --no-cache python-dev && \
