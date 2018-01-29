@@ -6,6 +6,7 @@ COPY run_nginx.sh /usr/local/bin
 
 RUN echo "http://dl-cdn.alpinelinux.org/alpine/v3.7/main" >> /etc/apk/repositories && \
     apk add busybox --update && \
+    apk update && apk upgrade --no-cache --update && \
     apk add --no-cache bash && \
     apk add --no-cache python && \
     apk add --no-cache python-dev && \
