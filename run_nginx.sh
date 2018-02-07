@@ -13,4 +13,9 @@ then
   mv /tmp/$LOCATION /usr/share/nginx/html
 fi
 
+if [[ -n BUILD_PDF ]]
+then
+  sphinx-build -b rinoh /docs /usr/share/nginx/html
+fi
+
 /usr/sbin/nginx -g 'daemon off;'
