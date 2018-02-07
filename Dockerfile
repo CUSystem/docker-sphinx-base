@@ -23,7 +23,6 @@ RUN apt-get -y update && apt-get -y upgrade && \
     pip install alabaster --no-cache-dir && \
     pip install sphinx_bootstrap_theme --no-cache-dir && \
     pip install plantweb --no-cache-dir && \
-    pip install rinohtype --no-cache-dir && \
     \
     \
     chmod u+x /usr/local/bin/run_nginx.sh
